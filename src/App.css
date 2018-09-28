@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+  background-color: #e2af38; 
+
+}
+
+/*.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 200px;
+}*/
+
+
+.App-header p{
+  position: absolute;
+
+}
+
+/*.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}*/
+
+.Apps-header  textarea{
+  position: absolute;
+  background: transparent;
+  color: black;
+  width: 765px;
+  height: 372px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.circle-container {
+  position: relative;
+  background-color: white;
+  width: 24em;
+  height: 24em;
+  right: 400px;
+  padding: 2.8em;
+  /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+  border: dashed 1px;
+  border-radius: 50%;
+  margin: 1.75em auto 0;
+}
+
+.circle-container a{
+  display: block;
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 4em; height: 4em;
+  margin: -2em;
+}
+
+.circle-container h3 { display: block; width: 100%; }
+.degcenter {transform: rotate(center) translate(12em);}
+.degcenter {
+    position: relative;
+   /* transform: rotate(0deg);*/
+    transition: rotate 500ms linear;
+    animation-delay: 10ms;
+}
+
+.deg0 { transform: translate(12em);} /* 12em = half the width of the wrapper */
+.deg21 {transform: rotate(21.17deg) translate(12em) rotate(-21.17deg);}
+.deg42 { transform: rotate(42.35deg) translate(12em) rotate(-42.35deg); }
+.deg63 { transform: rotate(63.52deg) translate(12em) rotate(-63.52deg); }
+.deg84 {transform: rotate(84.69deg) translate(12em) rotate(-84.69deg);}
+.deg105 {transform: rotate(105.86deg) translate(12em) rotate(-105.86deg);}
+.deg127 {transform: rotate(127.03deg) translate(12em) rotate(-127.03deg);}
+.deg148 {transform: rotate(148.2deg) translate(12em) rotate(-148.2deg);}
+.deg169 {transform: rotate(169.37deg) translate(12em) rotate(-169.37deg);}
+.deg190 {transform: rotate(190.54deg) translate(12em) rotate(-190.54deg);}
+.deg211 {transform: rotate(211.71deg) translate(12em) rotate(-211.71deg);}
+.deg232 {transform: rotate(232.88deg) translate(12em) rotate(-232.88deg);}
+.deg254 {transform: rotate(254.05deg) translate(12em) rotate(-254.05deg);}
+.deg275 {transform: rotate(275.22deg) translate(12em) rotate(-275.22deg);}
+.deg296 {transform: rotate(296.39deg) translate(12em) rotate(-296.39deg);}
+.deg317 {transform: rotate(317.56deg) translate(12em) rotate(-317.56deg);}
+.deg338 {transform: rotate(338.73deg) translate(12em) rotate(-338.73deg);}
+.deg359 {transform: rotate(359.9deg) translate(12em) rotate(-359.9deg);}
