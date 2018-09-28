@@ -1,3 +1,10 @@
+.main{
+  flex: 1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
   background-color: #e2af38; 
@@ -60,7 +67,8 @@ div.transbox p {
 
 
 .circle-container {
-  position: relative;
+  text-align: center;
+
   background-color: white;
   width: 24em;
   height: 24em;
@@ -69,15 +77,16 @@ div.transbox p {
   /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
   border: dashed 1px;
   border-radius: 50%;
-  margin: 1.75em auto 0;
 }
 
 .circle-container a{
-  display: block;
+  
+  /*display: block;*/
+  text-align: center;
   position: absolute;
-  top: 50%; left: 50%;
-  width: 4em; height: 4em;
-  margin: -2em;
+  top: 399px; 
+  left: 49%;
+  width: 1em; 
 }
 
 .circle-container h3 { display: block; width: 100%; }

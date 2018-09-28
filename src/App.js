@@ -97,8 +97,11 @@ class App extends Component {
     return (
       
       <div className="App">
-      
-        <center><h2>Mars - Earth Hex COM</h2></center>
+
+       <header className="App-header">
+        <h2>Mars - Earth Hex COM</h2>
+        
+        </header>
         
         <p>
           <form onSubmit={this.move}>
@@ -116,13 +119,13 @@ class App extends Component {
 
 
         
-        <header className="App-header">
-
-          <div class='circle-container'>
+       <div className='main'>
+      
+        <div className='circle-container'>
             
-            <a id="turn" class='degcenter'><h3>==============></h3></a>
+            <a className='degcenter'><h3>==============></h3></a>
             <a class='deg0'><h3>0</h3></a>
-            <a class='deg21'><h3>1</h3></a>`
+            <a class='deg21'><h3>1</h3></a>
             <a class='deg42'><h3>2</h3></a>
             <a class='deg63'><h3>3</h3></a>
             <a class='deg84'><h3>4</h3></a>
@@ -143,8 +146,8 @@ class App extends Component {
 
 
           </div>
+          </div>
 
-        </header>
 
       </div>
 
