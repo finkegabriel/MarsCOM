@@ -16,21 +16,140 @@ class App extends Component {
   handleChange(event) {
     this.setState({value: event.target.value});
   }
- 
+    toHex(str) {
+      var hex = '';
+	for(var i=0;i<str.length;i++) {
+		hex += ''+str.charCodeAt(i).toString(16);
+	}
+	return hex;
+    }
+    
+
+    rotateme(text){
+      var angle;
+
+      let degcenter = document.querySelector(".degcenter");
+     
+      //var text = p.split("");
+      console.log("worked");
+
+     // console.log(text);
+      if(text==='0'){
+        angle = '0deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='1'){
+        angle = '21deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+      }
+      if(text==='2'){
+        angle = '42deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+      }
+      if(text==='3'){
+        angle = '63deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='4'){
+        angle = '84deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='5'){
+        angle = '105deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='6'){
+        angle = '127deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='7'){
+        angle = '148deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='8'){
+        angle = '169deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='9'){
+        angle = '190deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='A'){
+        angle = '211deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='B'){
+        angle = '232deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='C'){
+        angle = '254deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='D'){
+        angle = '275deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }
+      if(text==='E'){
+        angle = '296deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+      }
+      if(text==='F'){
+        angle = '317deg';
+        degcenter.style.transform = 'rotate('+angle+')';
+
+      }if(text==='?'){
+       angle = '338deg';
+       degcenter.style.transform = 'rotate('+angle+')';
+
+      }else{
+        console.log("You done fucked up!!");
+      }
+    }
     move(event) {
-    var angle = '90deg';
-    //console.log(event.target.value);
+    var angle ='';
+    var text = this.state.value;
+  
+    //console.log(this.toHex(this.state.value));
     console.log(this.state.value);
-    let degcenter = document.querySelector(".degcenter");
-    degcenter.style.transform = 'rotate('+angle+')';
+    var str_split = text.split("");
     try{
 
+    for(var i=0; i<str_split.length; i++){
+      var result = str_split[i];
+
+      console.log(str_split[i]);
+      var r = this.toHex(result);
+      console.log(r);
+
+      var splitt = r.split("");
+
+      console.log(splitt);
+
+      this.rotateme(splitt);
+     
+    }
+
+  
     }catch(error){
 
     }
     event.preventDefault();
 
   }
+
   
 
    
