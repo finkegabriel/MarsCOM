@@ -85,8 +85,7 @@ div.transbox p {
 .degcenter {
     position: relative;
     /*transform: rotate(127deg);*/
-    transition: rotate 500ms linear;
-    animation-delay: 10ms;
+    /*transition: rotate 500ms linear;*/
 }
 
 .deg0 { transform: translate(12em);} /* 12em = half the width of the wrapper */

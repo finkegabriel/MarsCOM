@@ -9,6 +9,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
+    this.queue = [];
+    this.intervalId = setInterval(() => {
+      if(this.queue.length){
+          this.rotateme(this.queue.shift())
+      }
+    }, 1000);
+
+
     this.move = this.move.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -16,6 +24,7 @@ class App extends Component {
   handleChange(event) {
     this.setState({value: event.target.value});
   }
+
     toHex(str) {
       var hex = '';
 	for(var i=0;i<str.length;i++) {
@@ -25,99 +34,29 @@ class App extends Component {
     }
     
 
+   
+
     rotateme(text){
       var angle;
-
+      
       let degcenter = document.querySelector(".degcenter");
      
-      //var text = p.split("");
       console.log("worked");
+      
+      var degrees =  parseInt(text, 16)*21;
 
-     // console.log(text);
-      if(text==='0'){
-        angle = '0deg';
-        degcenter.style.transform = 'rotate('+angle+')';
+      
+      //console.log(t, "text");
+      console.log(degrees, "degress");
 
-      }
-      if(text==='1'){
-        angle = '21deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-      }
-      if(text==='2'){
-        angle = '42deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-      }
-      if(text==='3'){
-        angle = '63deg';
-        degcenter.style.transform = 'rotate('+angle+')';
+      degcenter.style.transition = 'transform 500ms linear';
 
-      }
-      if(text==='4'){
-        angle = '84deg';
-        degcenter.style.transform = 'rotate('+angle+')';
+      degcenter.style.transform = `rotate(${degrees}deg)`;
+     
 
-      }
-      if(text==='5'){
-        angle = '105deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='6'){
-        angle = '127deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='7'){
-        angle = '148deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='8'){
-        angle = '169deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='9'){
-        angle = '190deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='A'){
-        angle = '211deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='B'){
-        angle = '232deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='C'){
-        angle = '254deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='D'){
-        angle = '275deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }
-      if(text==='E'){
-        angle = '296deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-      }
-      if(text==='F'){
-        angle = '317deg';
-        degcenter.style.transform = 'rotate('+angle+')';
-
-      }if(text==='?'){
-       angle = '338deg';
-       degcenter.style.transform = 'rotate('+angle+')';
-
-      }else{
-        console.log("You done fucked up!!");
-      }
+    
     }
+
     move(event) {
     var angle ='';
     var text = this.state.value;
@@ -138,7 +77,9 @@ class App extends Component {
 
       console.log(splitt);
 
-      this.rotateme(splitt);
+      this.queue =  this.queue.concat(splitt);
+      
+     // this.rotateme(splitt);
      
     }
 
@@ -149,10 +90,6 @@ class App extends Component {
     event.preventDefault();
 
   }
-
-  
-
-   
 
   
   render() {
