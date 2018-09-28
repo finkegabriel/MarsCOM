@@ -82,12 +82,12 @@ div.transbox p {
 
 .circle-container h3 { display: block; width: 100%; }
 .degcenter {transform: rotate(center) translate(12em);}
-.degcenter {
+/*.degcenter {
     position: relative;
-   /* transform: rotate(0deg);*/
+    transform: rotate(127deg);
     transition: rotate 500ms linear;
     animation-delay: 10ms;
-}
+}*/
 
 .deg0 { transform: translate(12em);} /* 12em = half the width of the wrapper */
 .deg21 {transform: rotate(21.17deg) translate(12em) rotate(-21.17deg);}

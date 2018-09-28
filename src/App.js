@@ -16,39 +16,24 @@ class App extends Component {
   handleChange(event) {
     this.setState({value: event.target.value});
   }
-
+ 
     move(event) {
+    var angle = '90deg';
     //console.log(event.target.value);
     console.log(this.state.value);
+    let degcenter = document.querySelector(".degcenter");
+    degcenter.style.transform = 'rotate('+angle+')';
+    try{
+
+    }catch(error){
+
+    }
     event.preventDefault();
 
-    //this.setState({deg: 'useless placeholder'});
-    //this.state.value===i;
-   
-    
-    
-    
-    /*    document.getElementById('h3').onChange = function(){
-          var div = document.getElementById('degcenter'),
-                      deg = rotated ? 0:66;
-                     }*/
-
-    //console.log(this.state.value);
-    /*if(this.state.value===''){
-      console.log('accepted');
-    }else{
-      console.log('error');
-    }*/
   }
+  
 
-    /*divStyle ={
-
-    position: 'relative',
-    transform: 'rotate(0deg)',
-    transition: 'rotate 500ms linear'
-    
-  };*/
-
+   
 
   
   render() {
@@ -67,7 +52,7 @@ class App extends Component {
             <input type="text" name="message" placeholder="Message" value={this.state.value} onChange={this.handleChange} />
 
             <p>
-            <input type="submit" value="Send" />
+            <input id="sendMessage" type="submit" value="Send" />
             </p>
 
           </form>
@@ -78,10 +63,10 @@ class App extends Component {
         <header className="App-header">
 
           <div class='circle-container'>
-       
-            <a class='degcenter' style={this.divStyle}><h3>===============></h3></a>
+            
+            <a id="turn" class='degcenter'><h3>==============></h3></a>
             <a class='deg0'><h3>0</h3></a>
-            <a class='deg21'><h3>1</h3></a>
+            <a class='deg21'><h3>1</h3></a>`
             <a class='deg42'><h3>2</h3></a>
             <a class='deg63'><h3>3</h3></a>
             <a class='deg84'><h3>4</h3></a>
