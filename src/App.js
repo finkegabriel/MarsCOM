@@ -2,7 +2,25 @@ import React, { Component } from 'react';
 //import logo from './rovercircle.svg';
 import './App.css';
 import logos from './line.png';
-import { EventEmitter } from 'events';
+import Background from '../src/assets/background.jpg';
+
+const baseStyles = {
+  contain:{
+    height: '100vh',
+    position: 'relative',
+  },
+  background:{
+    backgroundImage: `url(${Background})`,
+    // backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    height: '103vh',
+    width: '100%',
+    marginTop:'-1.5rem',
+  },
+  circle:{
+    backgroundColor: 'rgba(0,0,0,.5)',
+  },
+}
 
 class App extends Component {
 
@@ -95,15 +113,16 @@ class App extends Component {
   render() {
     
     return (
-      
-      <div className="App">
+      <div style={baseStyles.contain}>
+      <div className="App" style={baseStyles.background}>
 
-       <header className="App-header">
+       <header className="App-header" >
         <h2>Mars - Earth Hex COM</h2>
         
         </header>
         
         <p>
+          
           <form onSubmit={this.move}>
             <p>
               <textarea value={this.state.value}></textarea>
@@ -119,9 +138,8 @@ class App extends Component {
 
 
         
-       <div className='main'>
-      
-        <div className='circle-container'>
+       <div className='main' >
+        <div className='circle-container' style={baseStyles.circle}>
             
             <a className='degcenter'><h3>==============></h3></a>
             <a class='deg0'><h3>0</h3></a>
@@ -144,7 +162,7 @@ class App extends Component {
 
 
 
-
+            </div>
           </div>
           </div>
 
